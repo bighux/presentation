@@ -28,7 +28,14 @@
 		<script src="reveal_js/js/reveal.js"></script>
 		<script>
 			Reveal.initialize({
+				dependencies: [
+					// Interpret Markdown in <section> elements
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 
+					// Speaker notes
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
 			});
 		</script>
 	</body>
